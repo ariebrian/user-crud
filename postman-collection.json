@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "7469fe1f-24b3-40ae-9c32-f6f0b4f6857c",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1233502"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"password\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQzMDFmZTkwNzRlNTUwMjE1ZjQ3MTciLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE2ODIxMTMyODV9.O8EHyiZhAUmZahlIaRauW_5aAkOVBVnAgVd0_A_dnL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"\",\r\n    \"password\": \"\",\r\n    \"role\": \"User\" //Admin, User\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/create/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQzMDFmZTkwNzRlNTUwMjE1ZjQ3MTciLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE2ODIxMTMyODV9.O8EHyiZhAUmZahlIaRauW_5aAkOVBVnAgVd0_A_dnL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQzMDFmZTkwNzRlNTUwMjE1ZjQ3MTciLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE2ODIxMTMyODV9.O8EHyiZhAUmZahlIaRauW_5aAkOVBVnAgVd0_A_dnL4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/api/user/64430847be6dd2dbb600df7b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"64430847be6dd2dbb600df7b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQzMDg0N2JlNmRkMmRiYjYwMGRmN2IiLCJyb2xlIjoiVXNlciIsImlhdCI6MTY4MjExNDgyMX0._sBOedLtQNAHimcKzgP_bzMQdATzw0XaH5Ib4cVxR-Q",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"arii\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/update/64430847be6dd2dbb600df7b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"update",
+						"64430847be6dd2dbb600df7b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDQzMDFmZTkwNzRlNTUwMjE1ZjQ3MTciLCJyb2xlIjoiQWRtaW4iLCJpYXQiOjE2ODIxMTMyODV9.O8EHyiZhAUmZahlIaRauW_5aAkOVBVnAgVd0_A_dnL4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"arii\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/delete/64430847be6dd2dbb600df7b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"delete",
+						"64430847be6dd2dbb600df7b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

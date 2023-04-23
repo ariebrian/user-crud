@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: express-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: express-app
+  template:
+    metadata:
+      labels:
+        app: express-app
+    spec:
+      containers:
+        - name: express-app
+          image: lightflame/express-deall-brian:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: MONGODB_URI
+              valueFrom:
+                secretKeyRef:
+                  name: mongodb-secret
+                  key: mongodb-uri-secret
